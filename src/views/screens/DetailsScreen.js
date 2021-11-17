@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useState } from 'react';
 import {
   ImageBackground,
   SafeAreaView,
@@ -6,12 +6,17 @@ import {
   Text,
   StyleSheet,
   ScrollView,
+  TouchableOpacity
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import COLORS from '../../consts/colors';
+
 const DetailsScreen = ({navigation, route}) => {
   const furniture = route.params;
+  const [count, setCount] = useState(1);
+  
+ 
 
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: COLORS.white}}>
@@ -64,14 +69,31 @@ const DetailsScreen = ({navigation, route}) => {
               style={{color: COLORS.yellow, fontSize: 22, fontWeight: 'bold'}}>
               {furniture.price}
             </Text>
+
             <View style={style.quantityContainer}>
+            <TouchableOpacity
+                       onPress={() => {
+                         {
+                          setCount(count + 1);
+                        }
+                      }}>
               <View style={style.quantityBtn}>
                 <Icon name="plus" size={20} />
               </View>
-              <Text style={{color: COLORS.white, fontWeight: 'bold'}}>1</Text>
+              </TouchableOpacity>
+
+              <Text style={{color:COLORS.white}}>{count}</Text>
+
+              <TouchableOpacity
+                onPress={() => {
+                  if (count > 0){setCount(count - 1);}
+                
+                  }}
+              >       
               <View style={style.quantityBtn}>
                 <Icon name="minus" size={20} />
               </View>
+              </TouchableOpacity>
             </View>
           </View>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>

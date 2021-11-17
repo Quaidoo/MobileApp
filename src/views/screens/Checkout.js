@@ -35,9 +35,14 @@ function Checkout({navigation}) {
 
     const [input,setInput,] = React.useState("");
 
+    
+
+
+
+
     return (
 
-        {/* Payment section*/}
+        
 
         <View style={styles.Checkout}>
             <ScrollView showsVerticalScrollIndicator={false}>
