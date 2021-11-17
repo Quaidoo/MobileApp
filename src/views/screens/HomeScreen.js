@@ -17,6 +17,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import furnitures from '../../consts/furnitures';
 const {width} = Dimensions.get('screen');
 
+{/* categoriesContainer area*/}
 const HomeScreen = ({navigation}) => {
   const categoryItems = [
     {name: 'Chair', iconName: 'seat-outline'},
@@ -70,7 +71,7 @@ const HomeScreen = ({navigation}) => {
     );
   };
 
-
+{/* Images for HomeScreen */}
   const PopularItemCard = ({furniture}) => {
     return (
       <View style={style.popularItemCard}>
@@ -138,13 +139,14 @@ const HomeScreen = ({navigation}) => {
     );
   };
 
-  
 
 
 
-  
+
+
   return (
     <SafeAreaView style={{backgroundColor: COLORS.white, flex: 1}}>
+
       {/* Header container */}
       <View style={style.header}>
         <Icon name="sort-variant" size={28} color={COLORS.primary} />
@@ -171,6 +173,7 @@ const HomeScreen = ({navigation}) => {
         </View>
 
         <Text style={style.title}>Categories</Text>
+
         {/* Render categories */}
         <ListCategories />
 

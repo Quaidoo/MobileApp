@@ -25,13 +25,14 @@ const DetailsScreen = ({navigation, route}) => {
         </View>
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
+
         {/* Furniture image */}
 
         <ImageBackground
           resizeMode="cover"
           style={style.backgroundImage}
           source={furniture.image}>
-         
+
         </ImageBackground>
 
         <View style={style.detailsContainer}>
@@ -88,6 +89,7 @@ const DetailsScreen = ({navigation, route}) => {
               <Icon name="heart-outline" size={28} color={COLORS.primary} />
             </View>
             <View style={style.addToCartBtn}>
+            {/* navigate To cart when clicked */}
               <Text style={{color: COLORS.white}} onPress={() => navigation.push('Cartlist')}>Add To Cart</Text>
             </View>
           </View>
