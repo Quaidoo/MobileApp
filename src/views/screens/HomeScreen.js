@@ -97,7 +97,7 @@ const HomeScreen = ({navigation}) => {
             <Text style={style.price}>{furniture.price}</Text>
             <View style={{flexDirection: 'row', marginLeft: 10}}>
               <Icon name="star" color={COLORS.yellow} size={18} />
-              <Text style={style.rating}>4.3</Text>
+              <Text style={style.rating}>5.0</Text>
             </View>
           </View>
         </View>
@@ -131,7 +131,7 @@ const HomeScreen = ({navigation}) => {
             <Text style={style.price}>{furniture.price}</Text>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <Icon name="star" color={COLORS.yellow} size={18} />
-              <Text style={style.rating}>4.3</Text>
+              <Text style={style.rating}>5.0</Text>
             </View>
           </View>
         </View>

@@ -67,7 +67,7 @@ function Checkout({navigation}) {
 
             <Text style={styles.cardStyle}> CARD NUMBER </Text>
             <View style={styles.buttonCatnew} >
-            <TextInput keyboardType="default" style={{color:"black", fontSize:15,paddingLeft:10, }} placeholder=' Enter Card Number ' />
+            <TextInput keyboardType="default" style={{color:"black", fontSize:15,paddingLeft:5, }} placeholder=' Enter Card Number ' />
             </View>
 
             <View style={styles.categories}>
